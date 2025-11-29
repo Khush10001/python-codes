@@ -3,7 +3,7 @@ import ssl
 from email.message import EmailMessage
 
 E = "bufferingblock@gmail.com"
-app_pass = "wlre zlys vssk ohho"
+app_pass = "*******************"
 re = input("ENTER RECEIVER EMAIL : ")
 
 msg = EmailMessage()
