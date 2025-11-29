@@ -1,0 +1,40 @@
+import pyttsx3
+engine = pyttsx3.init()
+while True:
+    a = int(input("Enter your age: "))    
+    b = input("Do you have a ticket (yes/no)? ")
+
+    if b == "yes":
+        if a >= 18:
+            print(f"As your age is {a} and you have a ticket, you can watch the movie.")
+            engine.say(f"As your age is {a} and you have a ticket, you can watch the movie.")
+            engine.runAndWait()
+        elif a <= 15:
+            print("You can watch the movie only with your parents.")
+            p = input("Are you with your parents (yes/no)? ")
+            if p == "yes":
+                print("You are allowed to go inside.")
+                engine.say("You are allowed to go inside")
+                engine.runAndWait()
+            elif p == "no":
+                print("You are not allowed to go inside.")
+                engine.say("You are not allowed to go inside")
+                engine.runAndWait()
+            else:
+                print("Invalid input for parents; not allowed.")
+                engine.say("what?... come again")
+                engine.runAndWait()
+        else:
+            print(f"As your age is {a} and you have a ticket, you can watch the movie.")
+            engine.say(f"As your age is {a} and you have a ticket, you can watch the movie")
+            engine.runAndWait()
+            
+    elif b == "no":
+        print(f"You do not have a ticket, so you are not allowed to go inside.")
+        engine.say(f"You do not have a ticket, so you are not allowed to go inside.")
+        engine.runAndWait()
+    else:
+        print(f"Invalid ticket input; not allowed.")
+        engine.say("what?... come again")
+        engine.runAndWait()
+        break
