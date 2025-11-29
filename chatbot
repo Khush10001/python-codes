@@ -1,0 +1,21 @@
+import streamlit as st
+import google.generativeai as genai
+
+
+key = input("here enter your google key")
+genai.configure(api_key=key)
+model = genai.GenerativeModel("gemini-2.5-flash")
+
+
+st.title("\\\\.......NoVa......////")
+st.write("hi my name is NOVA ... what can i do for you")
+
+user_input = st.chat_input("what you want...")
+if user_input:
+    with st.chat_message("user"):
+        st.write(user_input)
+
+    response = model.generate_content(user_input).text
+
+    with st.chat_message("assistant"):
+        st.write(response)
