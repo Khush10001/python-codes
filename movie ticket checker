@@ -1,0 +1,23 @@
+while True:
+    a = int(input("Enter your age: "))
+    b = input("Do you have a ticket (yes/no)? ")
+    
+    if b == "yes":
+        if a >= 18:
+            print(f"As your age is {a} and you have a ticket, you can watch the movie.")
+        elif a <= 15:
+            print("You can watch the movie only with your parents.")
+            p = input("Are you with your parents (yes/no)? ")
+            if p == "yes":
+                print("You are allowed to go inside.")
+            elif p == "no":
+                print("You are not allowed to go inside.")
+            else:
+                print("Invalid input for parents; not allowed.")
+        else:
+            print(f"As your age is {a} and you have a ticket, you can watch the movie.")
+    elif b == "no":
+        print(f"You do not have a ticket, so you are not allowed to go inside.")
+    else:
+        print(f"Invalid ticket input; not allowed.")
+        break
