@@ -1,0 +1,20 @@
+print("Enter 1. to positive/negative checker ")
+print("Enter 2. to even/odd checker")
+
+ch =int(input("Enter your choice: "))
+no = float(input("Enter a number: "))
+
+
+if ch ==1:
+    if no > 0:
+        print(f"{no} The number is Positive.")
+    elif no < 0:
+        print(f"{no} The number is Negative.")
+    else:
+        print(f"{no} The number is Zero.")
+        
+elif ch == 2:
+    if no % 2 == 0:
+        print(f"{no} The number is Even.")
+    else:
+        print(f"{no} The number is Odd.")
