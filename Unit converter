@@ -1,0 +1,99 @@
+while True:
+    print(".........................................................UNIT CONVERTER............................................................")
+    print("enter - l for length_converter")
+    print("enter - w for weight_converter")
+    print("enter - te for temperature_converter")
+    print("enter - t for time_converter")
+    print("enter - b for exit ")
+    con = input("Enter which convertion you want := ")
+    
+    if con == "l":
+        print("\n--- Length Converter ---")
+        print("enter =1. Kilometer to Meter")
+        print("enter =2. Meter to Kilometer")
+        print("enter =3. Centimeter to Meter")
+        print("enter =4. Meter to Centimeter")
+
+        choice = int(input("\nChoose an option: "))
+        value = float(input("Enter value: "))
+    
+        if choice == 1:
+            print(f"{value} km = {value * 1000} m")
+        elif choice == 2:
+            print(f"{value} m = {value / 1000} km")
+        elif choice == 3:
+            print(f"{value} cm = {value / 100} m")
+        elif choice == 4:
+            print(f"{value} m = {value * 100} cm")
+        else:
+            print("Invalid choice!")
+
+            
+
+    elif con == "w":
+        print("\n--- Weight Converter ---")
+        print("enter =1. Kilogram to Gram")
+        print("enter =2. Gram to Kilogram")
+        print("enter =3. Pound to Kilogram")
+        print("enter =4. Kilogram to Pound")
+    
+        choice = int(input("\nChoose an option: "))
+        value = float(input("Enter value: "))
+    
+        if choice == 1:
+            print(f"{value} kg = {value * 1000} g")
+        elif choice == 2:
+            print(f"{value} g = {value / 1000} kg")
+        elif choice == 3:
+            print(f"{value} lb = {value * 0.453592} kg")
+        elif choice == 4:
+            print(f"{value} kg = {value * 2.20462} lb")
+        else:
+            print("Invalid choice!")
+
+            
+            
+    elif con == "te":
+        print("\n--- Temperature Converter ---")
+        print("enter =1. Celsius to Fahrenheit")
+        print("enter =2. Fahrenheit to Celsius")
+    
+        choice = int(input("\nChoose an option: "))
+        value = float(input("Enter value: "))
+    
+        if choice == 1:
+            print(f"{value}°C = {(value * 9/5) + 32}°F")
+        elif choice == 2:
+            print(f"{value}°F = {(value - 32) * 5/9}°C")
+        else:
+            print("Invalid choice!")
+
+
+    
+    elif con == "t":
+        print("\n--- Time Converter ---")
+        print("enter =1. Hours to Minutes")
+        print("enter =2. Minutes to Hours")
+        print("enter =3. Seconds to Minutes")
+        print("enter =4. Minutes to Seconds")
+    
+        choice = int(input("\nChoose an option: "))
+        value = float(input("Enter value: "))
+    
+        if choice == 1:
+            print(f"{value} hr = {value * 60} min")
+        elif choice == 2:
+            print(f"{value} min = {value / 60} hr")
+        elif choice == 3:
+            print(f"{value} sec = {value / 60} min")
+        elif choice == 4:
+            print(f"{value} min = {value * 60} sec")
+        else:
+            print("Invalid choice!")
+
+    elif con == "b":
+        print("\n////////////////////////////////////////Thank you for useing UNIT CONVERTER////////////////////////////////////////////")
+        break
+        
+    else:
+        print("Invalid choice!....read again...")
