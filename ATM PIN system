@@ -1,0 +1,52 @@
+correct_pin = "6969"
+print("You have only 3 Attempts")
+att = 0
+balance = 5000
+
+while att < 3:
+    pin = input("Enter your ATM PIN: ")
+    if pin == correct_pin:
+        print("Successful! your pin is correct\n")
+        break
+    
+    else:
+        att += 1
+        print("Wrong PIN!")
+        
+        if att < 3:
+            print(f"{3 - att} Attempts left:", 3 - att)
+        else:
+            print("\nYour card is BLOCKED due to 3 wrong attempts!")
+            exit()
+
+while True:
+    print("\n ATM MENU \n enter 1. Check Balance \nenter 2. Withdraw \nenter 3. Deposit \nenter 4. Exit")
+    ch = input("Enter your choice: ")
+
+    if ch == "1":
+        print("Your balance is:", balance)
+    
+    elif ch == "2":
+        try:
+            amt = float(input("Enter withdrawal amount: "))
+            if amt <= balance:
+                balance -= amt
+                print("Withdraw successful. New balance:", balance)
+            else:
+                print("Not enough balance!")
+        except ValueError:
+            print("Enter a valid number!")
+    elif ch == "3":
+        try:
+            amt = float(input("Enter deposit amount: "))
+            balance += amt
+            print("Deposit successful. New balance:", balance)
+        except ValueError:
+            print("Enter a valid number!")
+            44
+    elif ch == "4":
+        print("Thank you for using ATM!")
+        break
+        
+    else:
+        print("Invalid choice!")
